@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список цветов</title>
+</head>
+<body>
+    <h1>Цветы в магазине:</h1>
+    <ul>
+        {% for flower in flowers %}
+            <li>{{ flower.name }} - {{ flower.color }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

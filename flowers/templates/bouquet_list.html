@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список букетов</title>
+</head>
+<body>
+    <h1>Букеты в магазине:</h1>
+    <ul>
+        {% for bouquet in bouquets %}
+            <li>{{ bouquet.name }} - Цветы: 
+                {% for flower in bouquet.flowers.all %}
+                    {{ flower.name }},
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
